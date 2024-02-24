@@ -16,6 +16,11 @@ const Formulario = ({ registration }) => {
       return;
     }
 
+    if (edad < 18) {
+      setError("La edad mínima para registrarse es de 18 años");
+      return;
+    }
+
     registration({
       nombre,
       correo,
@@ -60,7 +65,7 @@ const Formulario = ({ registration }) => {
 
         <div className="form-group">
           <input
-            type="number"
+            type="text"
             name="edad"
             className="form-control"
             placeholder="Edad del colaborador"
