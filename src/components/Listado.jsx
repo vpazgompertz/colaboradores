@@ -1,6 +1,6 @@
 import React from "react";
 
-const Listado = ({ colaboradores, deleteColaborador }) => {
+const Listado = ({ colaboradores, deleteColaborador, cleanColaboradores }) => {
   return (
     <div className="list-container">
       <table className="table table-striped">
@@ -35,6 +35,9 @@ const Listado = ({ colaboradores, deleteColaborador }) => {
               </td>
             </tr>
           ))}
+          <button className="btn-clean" onClick={cleanColaboradores}>
+            Limpiar
+          </button>
         </tbody>
       </table>
     </div>

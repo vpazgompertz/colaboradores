@@ -38,6 +38,10 @@ function App() {
     return colaborador.nombre.toLowerCase().includes(busqueda.toLowerCase());
   });
 
+  const cleanColaboradores = () => {
+    setColaboradores([]);
+  };
+
   return (
     <section className="container">
       <div>
@@ -46,6 +50,7 @@ function App() {
         <Listado
           colaboradores={colaboradoresFilter}
           deleteColaborador={deleteColaborador}
+          cleanColaboradores={cleanColaboradores}
         />
       </div>
       <div>
