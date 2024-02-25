@@ -12,13 +12,13 @@ function App() {
   const [colaboradores, setColaboradores] = useState(BaseColaboradores);
   const [busqueda, setBusqueda] = useState("");
 
-  const Registration = (addColaborador) => {
-    if (addColaborador) {
-      setColaboradores([...colaboradores, addColaborador]);
+  const Registration = (success) => {
+    if (success) {
+      setColaboradores([...colaboradores, success]);
       setMessage("¡Colaborador Agregado!");
       setTimeout(() => {
         setMessage(null);
-      }, 3000);
+      }, 4000);
     } else {
       setMessage("¡Completa todos los campos!");
     }
